@@ -1,0 +1,20 @@
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    width: 100%;
+    height: 56px;
+    font-size: 18px;
+    font-weight: 700;
+    color: $text;
+    background-color: $main-color;
+    outline: none;
+    border: none;
+    transition: all .3s;
+    cursor: pointer;
+    letter-spacing: 0.25px;
+    &:hover {
+        background-color: darken($main-color, 5%);
+    }
+}

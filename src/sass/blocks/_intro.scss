@@ -1,0 +1,44 @@
+.intro {
+    min-height: calc(100vh - 56px);
+    padding: 60px 0 62px;
+    background: url('../img/bg.jpg') 56% (top / cover) no-repeat;
+    .descr {
+        margin-top: 20px !important;
+        max-width: 730px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .cards {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .card {
+            width: 100%;
+            margin-top: 50px;
+            svg {
+                display: block;
+                margin: 0 auto;
+                path {
+                    transition: all .5s;
+                }
+            }
+            &:hover {
+                svg {
+                    fill: rgba(119, 185, 0, 0.25);
+                }
+                path:nth-child(1) {
+                    stroke: $main-color;
+                }
+            }
+            .title.subtitle {
+                margin-top: 28px;
+            }
+            p {
+                margin-top: 12px;
+            }
+        }
+    }
+    .btn {
+        margin-top: 50px;
+    }
+}

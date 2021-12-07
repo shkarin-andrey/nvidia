@@ -1,0 +1,82 @@
+@media screen and (min-width: 576px) {
+    .intro {
+        .cards {
+            .card {
+                width: 255px;
+                .title.subtitle {
+                    text-align: left;
+                }
+            }
+        }
+    }
+    .btn {
+        width: 192px;
+        margin: 50px auto 0;
+    }
+    .modal {
+        &__call-back {
+            padding: 73px 95px;
+            form {
+                input {
+                    max-width: 350px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .header {
+        height: 90px;
+        .logo {
+            height: 60px;
+        }
+        .hamburger {
+            display: none;
+        }
+        .menu {
+            position: static;
+            height: 100%;
+            background: transparent;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: 14px;
+            ul {
+                flex-direction: row;
+                margin: 0;
+                height: 100%;
+                width: 440px;
+                li {
+                    height: 100%;
+                }
+            }
+            .message {
+                position: static;
+                transform: unset;
+            }
+        }
+    }
+    .intro {
+        min-height: calc(100vh - 90px);
+        .cards {
+            .card {
+                width: 380px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1110px) {
+    .container {
+        padding: 0;
+    }
+    .intro {
+        .cards {
+            .card {
+                width: 255px;
+            }
+        }
+    }
+}

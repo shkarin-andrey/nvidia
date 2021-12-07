@@ -1,0 +1,98 @@
+.header {
+    height: 56px;
+    display: flex;
+    .container {
+        display: flex;
+        height: 100%;
+        align-items: center;
+    }
+    .logo {
+        position: relative;
+        z-index: 1;
+        img {
+            width: auto;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .hamburger {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        justify-content: center;
+        align-items: center;
+        width: 56px;
+        height: 56px;
+        background-color: transparent;
+        transition: all .3s;
+        z-index: 1;
+        cursor: pointer;
+        &-active {
+            background-color: $main-color;
+        }
+        span {
+            width: 25px;
+            height: 2px;
+            background-color: #fff;
+        }
+    }
+    .menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        right: 0;
+        height: calc(100vh - 56px);
+        width: 100%;
+        background-color: $bg;
+        transition: all .5s;
+        &-active {
+            top: 56px;
+        }
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 16px 0 0 0;
+            padding: 0;
+            li {
+                height: 56px;
+                width: 100%;
+                list-style-type: none;
+                &:hover {
+                    background-color: $main-color;
+                }
+                a { display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+                    width: 100%;
+                    color: #fff;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                }
+            }
+        }
+        .message {
+            position: absolute;
+            bottom: 43px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 12px;
+            height: 48px;
+
+            svg {
+                cursor: pointer;
+
+                &:hover path {
+                    fill: $main-color;
+                }
+            }
+        }
+    }
+    
+}
